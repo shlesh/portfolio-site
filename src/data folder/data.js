@@ -44,15 +44,10 @@ export const details = {
         mhh3: '“Choose a job you love and you will never have to work a day in your life.”',
         bt: 'See my work',
     },
-    blog: {
-        title: 'My Posts',
-        desc: 'Welcome to my blog posts page!',
-        read: 'Read post ------>',
-    },
     portfolio: {
         t1: 'My projects',
         t2: 'Note',
-        ap1: 'My portfolio consists of project websites and a react native game app. In each one I put tried putting the maximum effort, perseverance, attention and creativity.',
+        ap1: 'My portfolio consists of project websites and a react native game app. In each one I put tried putting the maximum effort, attention and creativity.',
         ap2: 'These are some of the projects that I have worked on. You can also find the code of each project on my',
         cards: [
             {
@@ -81,7 +76,7 @@ export const details = {
                 imgMobile:
                     'https://res.cloudinary.com/dsgtwehup/image/upload/v1635761763/5c0r3k33p3r_wtjqcw.png',
                 descTitle: 'Project Description',
-                desc: 'A custom URL shortener with Cloudflare Workers. For its construction, HTML, CSS, JavaScript and Cloudflare Workers for the database and redirects.',
+                desc: 'A live scoreleeper that relies on the SportsMonk API to fetch data and display the webpage accordingly.',
                 liTitle1: 'Platform',
                 liDesc1: 'Web/Mobile',
                 liTitle2: 'Category',
@@ -89,7 +84,7 @@ export const details = {
                 liTitle3: 'Developer',
                 liDesc3: 'Shailesh Tiwari',
                 techT: 'Technologies Used',
-                techP: 'HTML<span>/</span>CSS<span>/</span>JavaScript<span>/</span>SportsMonk API',
+                techP: 'HTML<span>/</span>CSS<span>/</span>JavaScript<span>/</span>React<span>/</span>SportsMonk API',
                 butDemo: 'Launch App',
                 butRepo: 'Source Code',
                 linkDemo: 'hhttps://github.com/shlesh',
@@ -109,7 +104,7 @@ export const details = {
                 liTitle3: 'Developer',
                 liDesc3: 'Shailesh Tiwari',
                 techT: 'Technologies Used',
-                techP: 'HTML<span>/</span>CSS<span>/</span>JavaScript<span>/</span>React<span>/</span>Styled-Components',
+                techP: 'HTML<span>/</span>CSS<span>/</span>JavaScript<span>/</span>React<span>/</span>Styled-Components<span>/</span>EmailJS',
                 butDemo: 'Launch App',
                 butRepo: 'Source Code',
                 linkDemo: 'https://github.com/shlesh',
