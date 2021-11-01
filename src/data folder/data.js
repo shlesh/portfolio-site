@@ -76,7 +76,7 @@ export const details = {
                 imgMobile:
                     'https://res.cloudinary.com/dsgtwehup/image/upload/v1635761763/5c0r3k33p3r_wtjqcw.png',
                 descTitle: 'Project Description',
-                desc: 'A live scoreleeper that relies on the SportsMonk API to fetch data and display the webpage accordingly.',
+                desc: 'A live scorekeeper that relies on the SportsMonk API to fetch data and display the webpage accordingly.',
                 liTitle1: 'Platform',
                 liDesc1: 'Web/Mobile',
                 liTitle2: 'Category',
