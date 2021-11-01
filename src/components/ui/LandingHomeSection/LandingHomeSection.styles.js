@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const Section1 = styled.section`
+    padding: 0 60px;
     position: relative;
     height: 100vh;
 

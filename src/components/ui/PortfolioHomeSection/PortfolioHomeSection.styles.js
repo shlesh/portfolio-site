@@ -7,6 +7,7 @@ const arrowButton = keyframes`
 `;
 
 export const Section3 = styled.section`
+    padding: 0 60px;
     position: relative;
     z-index: 2;
     min-height: 100vh;
@@ -21,6 +22,7 @@ export const Section3 = styled.section`
     }
 `;
 export const Container = styled.div`
+    padding: 0 60px;
     height: auto;
     position: relative;
     display: flex;

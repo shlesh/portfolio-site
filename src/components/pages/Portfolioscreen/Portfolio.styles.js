@@ -6,11 +6,13 @@ const arrow = keyframes`
   100% { transform: translateY(0rem) }
 `;
 export const Section1 = styled.section`
+    padding: 0 60px;
     min-height: 100vh;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
+
     /* background: #fff; */
     img {
         position: absolute;
@@ -61,13 +63,16 @@ export const Section1 = styled.section`
     }
 `;
 export const Section2 = styled.section`
+    padding: 0 60px;
     min-height: 50vh;
     background: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0 60px;
 `;
 export const Container = styled.div`
+    padding: 0 60px;
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: 5rem;
@@ -105,9 +110,11 @@ export const Container = styled.div`
     }
 `;
 export const Section3 = styled.section`
+    padding: 0 60px;
     min-height: 100vh;
     background: #fff;
     padding-bottom: 5rem;
+    padding: 0 60px;
 
     @media only screen and (max-width: 768px) {
         width: 90%;

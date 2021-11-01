@@ -127,6 +127,7 @@ export const TitleContainer = styled.div`
 export const Section2 = styled.section`
     background: linear-gradient(to left, #ccebff, #bf80ff);
     min-height: 100vh;
+    padding: 0 60px;
 `;
 
 export const AboutMe = styled.div`
@@ -209,6 +210,7 @@ export const Section3 = styled.section`
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0 60px;
 `;
 export const Container = styled.div`
     display: flex;

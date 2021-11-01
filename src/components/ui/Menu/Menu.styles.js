@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const MainContainer = styled.div`
+    padding: 0 60px;
     &.active .header {
         top: 0;
     }

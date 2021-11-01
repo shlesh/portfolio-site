@@ -5,6 +5,7 @@ export const FooterSection = styled.section`
     z-index: 2;
     height: 100%;
     background: var(--darkBackground);
+    padding: 0 60px;
 
     .container {
         padding: 8rem 0 12rem;
