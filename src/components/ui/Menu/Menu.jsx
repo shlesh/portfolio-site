@@ -126,7 +126,7 @@ const Menu = () => {
                                 </NavLink>
                             </li>
                         </div>
-                        <div className="contact-desc">
+                        {/* <div className="contact-desc">
                             <p>{contDesc.desc}</p>
                             <a className="menu-email" href="mailto:23shlesh@gmail.com">
                                 {contDesc.em}
@@ -153,7 +153,7 @@ const Menu = () => {
                                     </a>
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                 </MenuContainer>
             </MenuStyles>

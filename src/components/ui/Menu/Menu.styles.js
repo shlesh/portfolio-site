@@ -188,7 +188,7 @@ export const MainContainer = styled.div`
         transition: 0.5s cubic-bezier(1, 0, 0, 1);
     }
     .left.active {
-        width: 10rem;
+        width: 5rem;
     }
 
     &.active .left,
@@ -523,6 +523,7 @@ export const MenuContainer = styled.div`
         color: var(--textColorDark);
         transition: 0.1s;
         -webkit-text-stroke-width: 0.1rem;
+        padding-left: 60px;
     }
     .menu-items li a:before {
         content: '';
