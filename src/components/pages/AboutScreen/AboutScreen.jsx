@@ -15,15 +15,15 @@ import ad1 from '../../../images/icons/adobe.svg';
 // import boot from '../../../images/icons/bootstrap.svg';
 import css from '../../../images/icons/css.svg';
 import gith from '../../../images/icons/github.svg';
-import html from '../../../images/icons/html-5.svg';
+import html from '../../../images/icons/html.svg';
 import js from '../../../images/icons/javascript.svg';
-import ra from '../../../images/icons/reaccionar.svg';
+import ra from '../../../images/icons/react.svg';
 import sass from '../../../images/icons/sass.svg';
 import triangle from '../../../images/triangle.png';
 import nt from '../../../images/icons/native.png';
 import nd from '../../../images/icons/node.png';
 import bootstrap from '../../../images/icons/bootstrap.png';
-import figma from '../../../images/icons/figma.png';
+import figma from '../../../images/icons/figma.svg';
 import express from '../../../images/icons/express.png';
 import { useSelector } from 'react-redux';
 import ButtonAnim from '../../ui/Button/ButtonAnim';
@@ -129,7 +129,7 @@ const About = () => {
                             <Skills>
                                 <ul>
                                     <li>
-                                        <img src={figma} alt="Figma" />
+                                        <img src={figma} alt="Figma" style={{ borderRadius: '50%' }} />
                                         Figma
                                     </li>
                                     <li>

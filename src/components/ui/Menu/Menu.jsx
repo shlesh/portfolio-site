@@ -64,7 +64,7 @@ const Menu = () => {
                 <div className="right">
                     <div className="social-container">
                         <div className="icon">
-                            <a target="_blank" rel="noreferrer" href="https://twitter.com/hintiiita">
+                            <a target="_blank" rel="noreferrer" href="https://twitter.com/sha_tiw">
                                 <img src={twitterIcon} alt="Twitter" />
                             </a>
                         </div>
@@ -148,7 +148,7 @@ const Menu = () => {
                                     </a>
                                 </div>
                                 <div className="icon">
-                                    <a target="_blank" rel="noreferrer" href="https://twitter.com/hintiiita">
+                                    <a target="_blank" rel="noreferrer" href="https://twitter.com/sha_tiw">
                                         <img src={twitterIcon} alt="Twitter" />
                                     </a>
                                 </div>

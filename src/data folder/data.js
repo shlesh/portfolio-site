@@ -3,7 +3,7 @@ export const details = {
     homeAbout: {
         tit: 'Heyy!',
         desc: `I'm Shailesh Tiwari, A web developer focused on building beautiful websites`,
-        butt: 'MORE ABOUT ME',
+        btn: 'MORE ABOUT ME',
     },
     homeblog: {
         title: 'Keep Scrolling',
@@ -11,7 +11,7 @@ export const details = {
     },
     homePort: {
         desc: 'Some of my latest projects',
-        butt: 'See all projects',
+        btn: 'See all projects',
     },
     menu: {
         footer: 'Made by Shailesh Tiwari with ❤️',

@@ -4,8 +4,8 @@ export const InnerCursor = styled.div`
     position: fixed;
     z-index: 10;
     left: 1rem;
-    width: 0.8rem;
-    height: 0.8rem;
+    width: 1.5rem;
+    height: 1.5rem;
     transform: translate(-50%, -50%);
     background: #fff;
     mix-blend-mode: difference;
@@ -20,13 +20,13 @@ export const InnerCursor = styled.div`
 `;
 export const OuterCursor = styled.div`
     /* position: fixed;
-  z-index: 5;
-  left: 1rem;
-  width: 3rem;
-  height: 3rem;
-  transform: translate(-50%, -50%);
-  border: 0.1rem solid #fff;
-  mix-blend-mode: difference;
-  border-radius: 50%;
-  pointer-events: none; */
+    z-index: 5;
+    left: 1rem;
+    width: 3rem;
+    height: 3rem;
+    transform: translate(-50%, -50%);
+    border: 0.1rem solid #fff;
+    mix-blend-mode: difference;
+    border-radius: 50%;
+    pointer-events: none; */
 `;
