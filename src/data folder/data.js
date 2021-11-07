@@ -23,7 +23,7 @@ export const details = {
             co: 'Contact',
         },
         contDesc: {
-            desc: 'If you want to communicate with me or are interested in starting a project together, get in touch.',
+            desc: 'If you want to contact me or are interested in starting a project together, get in touch.',
             em: 'Send me an email :)',
             so: 'Or send me a direct message on my social media.',
         },
