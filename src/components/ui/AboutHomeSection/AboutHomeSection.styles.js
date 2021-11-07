@@ -37,39 +37,6 @@ export const Section2 = styled.section`
         transition: 0.3s;
     }
 
-    /* .container .btn {
-    position: relative;
-    padding: 1rem 2rem;
-    border: .2rem solid var(--darkBackground);
-    margin: 0 0.5rem;
-    display: inline-block;
-    text-decoration: none;
-    color: var(--darkBackground);
-    text-transform: uppercase;
-    font-size: 1.2rem;
-    font-weight: 600;
-    overflow: hidden;
-    opacity: 1;
-    transition: .5s;
-  }
-  .container .btn:hover {
-    color: var(--lightBackground);
-  }
-  .container .btn span {
-    position: absolute;
-    display: block;
-    width: 0;
-    height: 0;
-    transform: translate(-50%, -50%);
-    border-radius: 50%;
-    background: var(--darkBackground);
-    z-index: -1;
-    transition: width .5s, height .5s;
-  }
-  .container .btn:hover span {
-    width: 30rem;
-    height: 30rem;
-  } */
     a {
         display: inline-block;
         font-size: 1.4rem;

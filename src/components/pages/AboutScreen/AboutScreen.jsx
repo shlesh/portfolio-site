@@ -34,7 +34,7 @@ const About = () => {
     useEffect(() => {
         window.scrollTo(0, 0);
         topObserver();
-        document.title = 'About Me | Shailesh Tiwari | Frontend Developer';
+        document.title = 'About Me | Shailesh Tiwari | Web Developer';
     }, []);
 
     const move = () => {

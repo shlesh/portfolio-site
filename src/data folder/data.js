@@ -1,7 +1,7 @@
 export const details = {
     pl: 'portfolio',
     homeAbout: {
-        tit: 'Heyy!',
+        titl: 'Heyy!',
         desc: `I'm Shailesh Tiwari, A web developer focused on building beautiful websites`,
         btn: 'MORE ABOUT ME',
     },
@@ -42,7 +42,7 @@ export const details = {
         skh41: 'Software / tools',
         skh42: 'Web development',
         mhh3: '“Choose a job you love and you will never have to work a day in your life.”',
-        bt: 'See my work',
+        bt: 'My Work',
     },
     portfolio: {
         t1: 'My projects',

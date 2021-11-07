@@ -1,40 +1,5 @@
 import styled, { keyframes } from 'styled-components';
 
-// export const Section1 = styled.div`
-//   min-height: 100vh;
-//   position: relative;
-//
-//   img {
-//     position: absolute;
-//     left: 0;
-//     height: 100%;
-//     transform: rotateY(180deg);
-//   }
-//   div {
-//     position: absolute;
-//     right: 0;
-//     height: 100%;
-//     width: 80%;
-//     background: #161619;
-//     background:
-//       linear-gradient(90deg,
-//         rgba(2,0,36,0) 0%,
-//         rgba(22, 22, 25, .1) 5%,
-//         rgba(22, 22, 25, .2) 10%,
-//         rgba(22, 22, 25, .3) 15%,
-//         rgba(22, 22, 25, .4) 20%,
-//         rgba(22, 22, 25, .5) 25%,
-//         rgba(22, 22, 25, .6) 30%,
-//         rgba(22, 22, 25, .7) 35%,
-//         rgba(22, 22, 25, .8) 40%,
-//         rgba(22, 22, 25, .9) 45%,
-//         #161619 50%,
-//         #161619 100%);
-//     display: flex;
-//     justify-content: center;
-//     align-items: flex-start;
-//   }
-// `
 const arrow = keyframes`
   0% { transform: translateY(0rem) }
   50% { transform: translateY(-1rem) }
@@ -250,20 +215,10 @@ export const PortfolioLink = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    /* a {
-    font-size: 3rem;
-    padding: 1rem 3rem;
-    text-transform: uppercase;
-    font-weight: 500;
-    background: #161619;
-    color: #fff;
-  } */
     a {
         text-transform: uppercase;
         font-weight: 500;
         display: flex;
-        /* width: 100px;
-    height: 100px; */
         font-size: 3rem;
         padding: 1rem 3rem;
         align-items: center;
