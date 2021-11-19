@@ -56,7 +56,7 @@ export const details = {
                 imgMobile:
                     'https://res.cloudinary.com/dsgtwehup/image/upload/v1635761259/covid_tracker_um5rom.png',
                 descTitle: 'Project Description',
-                desc: 'A basic website that shows the current vaccination status in india and was built purely to test how many featues I could add in such a single project',
+                desc: 'A basic website that shows the current vaccination status in india and was built purely to test how many featues I could add in a single project',
                 liTitle1: 'Platform',
                 liDesc1: 'Web/Mobile',
                 liTitle2: 'Category',
@@ -114,7 +114,6 @@ export const details = {
     },
     contact: {
         title: 'Get in touch.',
-        desc: 'en',
         fname: 'Your name',
         femail: 'Your email',
         fsubject: 'Subject',

@@ -102,14 +102,6 @@ export const Section2 = styled.section`
             margin: 0 !important;
             /* height: 23rem; */
         }
-        /* .container {
-      position: fixed;
-      z-index: 1;
-      top: 50%;
-      left: 50%;
-      width: 115rem;
-      transform: translate(-50%, -50%);
-    } */
         .container h2 {
             width: 100%;
             margin: 3rem 0;
@@ -119,30 +111,5 @@ export const Section2 = styled.section`
         .container .bt {
             transform: scaleY(1);
         }
-        /* .container {
-      position: fixed;
-      z-index: 1;
-      top: 50%;
-      left: 50%;
-      width: 115rem;
-      transform: translate(-50%, -50%);
-    }
-    .container h2 {
-      width: 60%;
-      font-size: 2.8rem;
-      font-weight: 700;
-      transition: 0.5s 0s;
-      transform: scaleY(0);
-    }
-    .container h2:nth-child(2) {
-      margin: 2rem 0 4rem;
-    }
-    .container span {
-      position: relative;
-    }
-    .container .bt {
-      transform: scaleY(0);
-      transition: 0.3s;
-    } */
     }
 `;

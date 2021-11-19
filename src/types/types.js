@@ -1,4 +1,4 @@
 export const types = {
-    en: '[Lang] English',
+    data: 'English',
     posts: '',
 };

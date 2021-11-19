@@ -3,7 +3,7 @@ import { details } from '../data folder/data';
 
 export const setDetails = () => {
     return {
-        type: types.en,
+        type: types.data,
         payload: details,
     };
 };

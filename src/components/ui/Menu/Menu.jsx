@@ -17,11 +17,6 @@ const Menu = () => {
         menuActions();
     }, []);
 
-    // / const setLangEnglish = () => {
-    // /   dispatch(setEnglish());
-    // /   document.body.id = 'en';
-    // / }
-
     return (
         <>
             <MainContainer className="main-container">
@@ -126,34 +121,6 @@ const Menu = () => {
                                 </NavLink>
                             </li>
                         </div>
-                        {/* <div className="contact-desc">
-                            <p>{contDesc.desc}</p>
-                            <a className="menu-email" href="mailto:23shlesh@gmail.com">
-                                {contDesc.em}
-                            </a>
-                            <p className="mobile">{contDesc.so}</p>
-                            <div className="social-container">
-                                <div className="icon">
-                                    <a
-                                        target="_blank"
-                                        rel="noreferrer"
-                                        href="https://www.linkedin.com/in/shailesh-t/"
-                                    >
-                                        <img src={linkedinIcon} alt="Linkedin" />
-                                    </a>
-                                </div>
-                                <div className="icon">
-                                    <a target="_blank" rel="noreferrer" href="https://github.com/shlesh">
-                                        <img src={githubIcon} alt="GitHub" />
-                                    </a>
-                                </div>
-                                <div className="icon">
-                                    <a target="_blank" rel="noreferrer" href="https://twitter.com/sha_tiw">
-                                        <img src={twitterIcon} alt="Twitter" />
-                                    </a>
-                                </div>
-                            </div>
-                        </div> */}
                     </div>
                 </MenuContainer>
             </MenuStyles>

@@ -1,3 +1,3 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-export const algo = styled.div``
+export const hmm = styled.div``;

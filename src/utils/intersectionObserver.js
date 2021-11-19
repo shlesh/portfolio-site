@@ -36,13 +36,9 @@ export const homeObserver = () => {
     const menuObserver = new IntersectionObserver(function (entries, menuObserver) {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                {
-                    !query.matches && menuButton.classList.add('light-active');
-                }
+                !query.matches && menuButton.classList.add('light-active');
             } else {
-                {
-                    !query.matches && menuButton.classList.remove('light-active');
-                }
+                !query.matches && menuButton.classList.remove('light-active');
             }
         });
     }, menuOptions);
@@ -87,15 +83,11 @@ export const topObserver = () => {
         const sectionOneObserver = new IntersectionObserver(function (entries, sectionOneObserver) {
             entries.forEach(entry => {
                 if (!entry.isIntersecting) {
-                    {
-                        !query.matches && main.classList.add('active');
-                        mainContainer.classList.add('active');
-                    }
+                    !query.matches && main.classList.add('active');
+                    mainContainer.classList.add('active');
                 } else {
-                    {
-                        !query.matches && main.classList.remove('active');
-                        mainContainer.classList.remove('active');
-                    }
+                    !query.matches && main.classList.remove('active');
+                    mainContainer.classList.remove('active');
                 }
             });
         }, sectionOneOptions);

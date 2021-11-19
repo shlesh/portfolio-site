@@ -67,10 +67,6 @@ export const MainContainer = styled.div`
         transform-origin: right;
         width: 100%;
     }
-    .header-container .languages {
-        display: flex;
-        align-items: center;
-    }
 
     .bottom {
         position: fixed;
@@ -240,19 +236,6 @@ export const MainContainer = styled.div`
         .header-container .logo.active {
             opacity: 0;
             transition: 0.4s cubic-bezier(1, 0, 0, 1);
-        }
-        .header-container .languages {
-            position: absolute;
-            z-index: 20;
-            left: -40px;
-            top: 40px;
-            opacity: 0;
-            transition: 0.3s 0s;
-        }
-        .header-container .languages.active {
-            left: 40px;
-            opacity: 1;
-            transition: 0.5s 0.2s;
         }
 
         /* BOTTOM
