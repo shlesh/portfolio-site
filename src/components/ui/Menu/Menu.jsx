@@ -3,16 +3,12 @@ import { menuActions } from '../../../utils/actions';
 import twitterIcon from '../../../images/icons/twitter.svg';
 import linkedinIcon from '../../../images/icons/linkedin.svg';
 import githubIcon from '../../../images/icons/github.svg';
-import { Link, NavLink, useLocation } from 'react-router-dom';
-import { useDispatch, useSelector } from 'react-redux';
-import { setDetails } from '../../../actions/data';
+import { Link, NavLink } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 import { MainContainer, MenuBackGround, MenuButton, MenuContainer, MenuStyles } from './Menu.styles';
 
 const Menu = () => {
-    const { pathname } = useLocation();
-    const dispatch = useDispatch();
-    const { footer, contDesc } = useSelector(state => state.data.pageContent.menu);
-
+    const { footer } = useSelector(state => state.data.pageContent.menu);
     useEffect(() => {
         menuActions();
     }, []);

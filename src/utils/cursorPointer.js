@@ -14,7 +14,7 @@ export const cursorEffect = () => {
         innerCursor.style.top = `${y}px`;
     }
 
-    const elem = document?.querySelectorAll('.blog-section');
+    const elem = document?.querySelectorAll('.scroll-section');
     const elem2 = document?.querySelectorAll('.icon');
     const elem3 = document?.querySelectorAll('.logo');
     const elem4 = document?.querySelectorAll('.portf-container');

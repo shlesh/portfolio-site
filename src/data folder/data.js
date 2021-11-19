@@ -5,7 +5,7 @@ export const details = {
         desc: `I'm Shailesh Tiwari, A web developer focused on building beautiful websites`,
         btn: 'MORE ABOUT ME',
     },
-    homeblog: {
+    homescroll: {
         title: 'Keep Scrolling',
         desc: 'To find out more :)',
     },

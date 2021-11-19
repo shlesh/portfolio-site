@@ -27,7 +27,7 @@ export const homeObserver = () => {
     /* LIGHT BUTTON MENU
       =============================== */
     const menuButton = document.querySelector('.menu-button');
-    const blogSection = document.querySelector('.blog-section');
+    const scrollSection = document.querySelector('.scroll-section');
 
     const menuOptions = {
         threshold: 1,
@@ -42,7 +42,7 @@ export const homeObserver = () => {
             }
         });
     }, menuOptions);
-    menuObserver.observe(blogSection);
+    menuObserver.observe(scrollSection);
 };
 
 export const footerObserver = () => {

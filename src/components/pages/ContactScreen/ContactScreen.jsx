@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import emailjs from 'emailjs-com';
+// import emailjs from 'emailjs-com';
 import { useSelector } from 'react-redux';
 import { topObserver } from '../../../utils/intersectionObserver';
 import { ContactForm, ContactTitle, Container } from './ContactScreen.styles';
@@ -15,6 +15,7 @@ const ContactScreen = () => {
 
     const handleSubmit = e => {
         e.preventDefault();
+        /// use this in the future to setup email
         // emailjs.sendForm('service_code', 'template_smthn', e.target, 'user_code').then(
         //     result => {
         //         alert('Email sent Successfully!');
