@@ -33,7 +33,7 @@ export const Section1 = styled.section`
         bottom: 0;
         width: 5rem;
         height: 5rem;
-        background: tra;
+        background: transparent;
         animation: ${arrow} 1.5s ease-in-out infinite;
     }
     h1 {

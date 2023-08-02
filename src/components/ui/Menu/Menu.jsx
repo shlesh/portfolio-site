@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { menuActions } from '../../../utils/actions';
+import { menuActionsFunc } from '../../../utils/actions';
 import twitterIcon from '../../../images/icons/twitter.svg';
 import linkedinIcon from '../../../images/icons/linkedin.svg';
 import githubIcon from '../../../images/icons/github.svg';
@@ -10,7 +10,7 @@ import { MainContainer, MenuBackGround, MenuButton, MenuContainer, MenuStyles } 
 const Menu = () => {
     const { footer } = useSelector(state => state.data.pageContent.menu);
     useEffect(() => {
-        menuActions();
+        menuActionsFunc();
     }, []);
 
     return (

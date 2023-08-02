@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-expressions */
 export const menuActions = () => {
     function menuActions() {
         document.querySelector('.menu')?.classList.toggle('active');
