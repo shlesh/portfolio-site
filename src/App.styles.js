@@ -13,11 +13,16 @@ export const Main = styled.main`
     }
     &:after {
         left: 0;
-        background-image: radial-gradient(circle at right, var(--borders), var(--lightBackground));
+        background-image:
+            radial-gradient(circle at 80% 15%, rgba(191, 128, 255, 0.16), transparent 40%),
+            radial-gradient(circle at right, var(--borders), var(--lightBackground));
     }
     &:before {
         right: 0;
-        background: var(--darkBackground);
+        background:
+            radial-gradient(circle at 30% 20%, rgba(255, 204, 255, 0.22), transparent 36%),
+            radial-gradient(circle at 80% 80%, rgba(204, 235, 255, 0.16), transparent 32%),
+            var(--darkBackground);
     }
     &.active:after {
         width: 77%;
@@ -49,11 +54,6 @@ export const Main = styled.main`
         transform: scaleY(1);
         transition: transform 0.3s 0.6s;
     }
-    /* @media only screen and (min-width: 1441px) {
-    &.active .sect-1 .picture {
-      right: calc(23% - 35rem);
-    }
-  } */
     @media only screen and (max-width: 1440px) {
         &.active .sect-1 .picture {
             right: calc(23% - 23rem);
