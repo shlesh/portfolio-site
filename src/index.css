@@ -81,6 +81,44 @@ body {
     z-index: 1;
     pointer-events: none;
 }
+
+.menu-background {
+    background: rgba(5, 3, 20, 0.28) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+.menu-container {
+    background: rgba(12, 7, 32, 0.42) !important;
+    backdrop-filter: blur(22px) saturate(160%);
+    -webkit-backdrop-filter: blur(22px) saturate(160%);
+}
+.menu-items li a {
+    color: #f4efff !important;
+    -webkit-text-stroke-color: transparent !important;
+}
+.menu-items li a:before {
+    background: linear-gradient(90deg, #5cf6ff, #9b6bff, #ff4fd8) !important;
+    height: 1.2rem !important;
+}
+.menu-items li a:hover,
+.menu-items li a.link__active {
+    color: #ffffff !important;
+    -webkit-text-stroke-width: 0 !important;
+    text-shadow: 0 0 1.6rem rgba(92, 246, 255, 0.35);
+}
+.menu-footer a:before {
+    background: linear-gradient(90deg, #5cf6ff, #ff4fd8) !important;
+}
+.right .icon img,
+.menu-container .icon img {
+    filter: invert(1) brightness(1.35);
+}
+.logo a,
+.logo a span,
+.menu-button p {
+    color: #f4efff !important;
+}
+
 h3 {
     font-size: 28px;
     font-weight: 900;
