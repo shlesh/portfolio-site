@@ -5,26 +5,84 @@
     cursor: none !important;
 }
 :root {
-    --lightBackground: #f8f8f8;
-    --darkBackground: #6f3fa8;
-    --borders: #fff;
-    --textColorDark: #161619;
-    --textColorLight: #f8f8f8;
-    --textColorGray: #808080;
-    --line: #2c3541;
+    --lightBackground: #0b0724;
+    --darkBackground: #2a1170;
+    --borders: #d7c6ff;
+    --textColorDark: #f3eeff;
+    --textColorLight: #f7f3ff;
+    --textColorGray: #a89bc9;
+    --line: #8b5cff;
+    --neonPink: #ff4fd8;
+    --neonCyan: #5cf6ff;
+    --neonViolet: #9b6bff;
+    --iconSurface: #efe7ff;
 }
 .color {
-    --lightBackground: #0e1319;
-    --darkBackground: #f8f8f8;
-    --borders: #000;
-    --textColorDark: #f8f8f8;
-    --textColorLight: #0e1319;
-    --textColorGray: #808080;
-    --line: #fff;
+    --lightBackground: #14082c;
+    --darkBackground: #5b2ad1;
+    --borders: #f0e7ff;
+    --textColorDark: #fff;
+    --textColorLight: #12071f;
+    --textColorGray: #b7a8d9;
+    --line: #5cf6ff;
 }
 html {
     font-size: 62.5%;
     font-family: 'Montserrat', sans-serif;
+    background: #050314;
+}
+body {
+    min-height: 100vh;
+    background:
+        radial-gradient(ellipse at 20% 10%, rgba(155, 107, 255, 0.28), transparent 42%),
+        radial-gradient(ellipse at 80% 80%, rgba(255, 79, 216, 0.16), transparent 40%),
+        radial-gradient(ellipse at 70% 20%, rgba(92, 246, 255, 0.12), transparent 36%),
+        #050314;
+    color: var(--textColorDark);
+}
+body::before,
+body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+}
+body::before {
+    opacity: 0.9;
+    background-image:
+        radial-gradient(1px 1px at 8% 12%, #fff 50%, transparent 51%),
+        radial-gradient(1px 1px at 22% 38%, #cfe8ff 50%, transparent 51%),
+        radial-gradient(1.4px 1.4px at 36% 8%, #fff 50%, transparent 51%),
+        radial-gradient(1px 1px at 48% 62%, #ffd6ff 50%, transparent 51%),
+        radial-gradient(1px 1px at 61% 24%, #fff 50%, transparent 51%),
+        radial-gradient(1.6px 1.6px at 74% 71%, #b8f6ff 50%, transparent 51%),
+        radial-gradient(1px 1px at 86% 16%, #fff 50%, transparent 51%),
+        radial-gradient(1px 1px at 93% 48%, #e4c7ff 50%, transparent 51%),
+        radial-gradient(1px 1px at 14% 78%, #fff 50%, transparent 51%),
+        radial-gradient(1.3px 1.3px at 29% 91%, #fff 50%, transparent 51%),
+        radial-gradient(1px 1px at 55% 88%, #c9b6ff 50%, transparent 51%),
+        radial-gradient(1px 1px at 69% 44%, #fff 50%, transparent 51%);
+    background-size: 520px 520px;
+    animation: starDrift 140s linear infinite;
+}
+body::after {
+    opacity: 0.55;
+    background-image:
+        radial-gradient(1.8px 1.8px at 18% 22%, rgba(255, 255, 255, 0.95) 50%, transparent 51%),
+        radial-gradient(2px 2px at 70% 30%, rgba(92, 246, 255, 0.9) 50%, transparent 51%),
+        radial-gradient(1.6px 1.6px at 40% 70%, rgba(255, 79, 216, 0.8) 50%, transparent 51%),
+        radial-gradient(2.2px 2.2px at 88% 76%, rgba(255, 255, 255, 0.9) 50%, transparent 51%);
+    background-size: 780px 780px;
+    animation: starTwinkle 6s ease-in-out infinite alternate, starDrift 200s linear infinite reverse;
+}
+@keyframes starDrift {
+    from { background-position: 0 0; }
+    to { background-position: -520px 780px; }
+}
+@keyframes starTwinkle {
+    from { opacity: 0.3; }
+    to { opacity: 0.75; }
 }
 h3 {
     font-size: 28px;
@@ -49,16 +107,23 @@ body::-webkit-scrollbar {
     width: 0.6rem;
 }
 body::-webkit-scrollbar-track {
-    background: var(--lightBackground);
+    background: #08051a;
 }
 body::-webkit-scrollbar-thumb {
-    background: var(--darkBackground);
+    background: linear-gradient(#5cf6ff, #9b6bff, #ff4fd8);
 }
 body::-webkit-scrollbar-thumb:active {
-    background: #1c2531;
+    background: #ff4fd8;
 }
 
 ::selection {
-    color: #fff;
-    background: #0b4970;
+    color: #050314;
+    background: #5cf6ff;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    body::before,
+    body::after {
+        animation: none !important;
+    }
 }
