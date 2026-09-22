@@ -3,8 +3,8 @@
     padding: 0;
     box-sizing: border-box;
 }
-html.cursor-on,
-html.cursor-on * {
+body.cursor-on,
+body.cursor-on * {
     cursor: none !important;
 }
 :root {
