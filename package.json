@@ -5,8 +5,12 @@
   "license": "MIT",
   "type": "module",
   "homepage": "https://shlesh.github.io/portfolio-site/",
+  "engines": {
+    "node": ">=18"
+  },
   "scripts": {
     "dev": "vite",
+    "start": "vite",
     "build": "vite build",
     "preview": "vite preview"
   },
