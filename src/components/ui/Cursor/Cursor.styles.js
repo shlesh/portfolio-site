@@ -5,15 +5,15 @@ export const InnerCursor = styled.div`
     top: 0;
     left: 0;
     z-index: 10000;
-    width: 1.4rem;
-    height: 1.4rem;
+    width: 14px;
+    height: 14px;
+    margin: 0;
     border-radius: 50%;
-    background: #fff;
+    background: #ffffff;
     mix-blend-mode: difference;
     pointer-events: none;
     transform: translate(-50%, -50%);
     transform-origin: center center;
-    will-change: transform;
 `;
 
 export const OuterCursor = styled.div`
@@ -21,14 +21,13 @@ export const OuterCursor = styled.div`
     top: 0;
     left: 0;
     z-index: 9999;
-    width: 3.6rem;
-    height: 3.6rem;
+    width: 36px;
+    height: 36px;
+    margin: 0;
     border-radius: 50%;
-    border: 0.12rem solid rgba(255, 255, 255, 0.85);
-    box-shadow: 0 0 1.6rem rgba(191, 128, 255, 0.35);
-    mix-blend-mode: difference;
+    border: 1px solid rgba(255, 255, 255, 0.9);
     pointer-events: none;
     transform: translate(-50%, -50%);
     transform-origin: center center;
-    will-change: transform, opacity;
+    mix-blend-mode: difference;
 `;
