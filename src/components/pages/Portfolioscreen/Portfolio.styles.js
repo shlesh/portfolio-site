@@ -13,7 +13,6 @@ export const Section1 = styled.section`
     justify-content: center;
     align-items: center;
 
-    /* background: #fff; */
     img {
         position: absolute;
         width: 45rem;
@@ -21,6 +20,7 @@ export const Section1 = styled.section`
         top: calc(50% - 22.5rem);
         left: calc(50% - 22.5rem);
         opacity: 0.8;
+        filter: drop-shadow(0 0 2.4rem rgba(155, 107, 255, 0.45));
     }
     img:last-child {
         top: calc(100% - 10rem);
@@ -30,6 +30,7 @@ export const Section1 = styled.section`
         width: 5rem;
         height: 5rem;
         background: transparent;
+        filter: invert(1) drop-shadow(0 0 0.8rem #5cf6ff);
         animation: ${arrow} 1.5s ease-in-out infinite;
     }
     h1 {
@@ -38,8 +39,9 @@ export const Section1 = styled.section`
         font-size: 6rem;
         text-transform: uppercase;
         background: transparent;
-        color: #ccc;
+        color: #fff;
         padding: 0 0.5rem;
+        text-shadow: 0 0 1.6rem rgba(255, 79, 216, 0.4);
     }
     &:before {
         content: '';
@@ -47,7 +49,6 @@ export const Section1 = styled.section`
         width: 50%;
         right: 0;
         height: 100%;
-        /* background: #161619; */
     }
 
     @media only screen and (max-width: 768px) {
@@ -65,11 +66,10 @@ export const Section1 = styled.section`
 export const Section2 = styled.section`
     padding: 0 60px;
     min-height: 50vh;
-    background: #fff;
+    background: rgba(11, 7, 36, 0.72);
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0 60px;
 `;
 export const Container = styled.div`
     padding: 0 60px;
@@ -80,17 +80,19 @@ export const Container = styled.div`
         font-size: 4rem;
         font-weight: 700;
         text-transform: uppercase;
+        color: #5cf6ff;
     }
     p {
-        /* font-weight: 500; */
         font-size: 2rem;
         line-height: 3rem;
+        color: #efe7ff;
     }
     p:first-child {
         margin-bottom: 3rem;
     }
     a {
         text-decoration: underline;
+        color: #ff4fd8;
     }
 
     @media only screen and (max-width: 768px) {
@@ -112,9 +114,8 @@ export const Container = styled.div`
 export const Section3 = styled.section`
     padding: 0 60px;
     min-height: 100vh;
-    background: #fff;
+    background: rgba(8, 5, 26, 0.55);
     padding-bottom: 5rem;
-    padding: 0 60px;
 
     @media only screen and (max-width: 768px) {
         width: 90%;
