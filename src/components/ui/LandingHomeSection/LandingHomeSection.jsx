@@ -9,17 +9,15 @@ const LandingHomeSection = () => {
 
 	return (
 		<>
-			{/* <!-- SECTION 1 (LANDING)
-      =============================== --> */}
 			<Section1 className="sect-1">
 				<picture className="picture">
 					<source
 						media="(min-width: 768px)"
-						srcset="https://res.cloudinary.com/dsgtwehup/image/upload/v1635773118/triangle_main.png"
+						srcSet="https://res.cloudinary.com/dsgtwehup/image/upload/v1635773118/triangle_main.png"
 					/>
 					<source
 						media="(min-width: 300px) and (max-width: 768px)"
-						srcset="https://res.cloudinary.com/dsgtwehup/image/upload/v1635773118/triangle_main.png"
+						srcSet="https://res.cloudinary.com/dsgtwehup/image/upload/v1635773118/triangle_main.png"
 					/>
 					<img
 						src="https://res.cloudinary.com/dsgtwehup/image/upload/v1635773118/triangle_main.png"

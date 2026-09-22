@@ -1,31 +1,30 @@
-import React, { useEffect } from 'react';
-// import emailjs from 'emailjs-com';
+import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { topObserver } from '../../../utils/intersectionObserver';
 import { ContactForm, ContactTitle, Container } from './ContactScreen.styles';
 
 const ContactScreen = () => {
     const { contact } = useSelector(state => state.data.pageContent);
+    const [status, setStatus] = useState('');
 
-    window.scrollTo(0, 0);
     useEffect(() => {
+        window.scrollTo(0, 0);
         topObserver();
         document.title = 'Contact | Shailesh Tiwari';
     }, []);
 
     const handleSubmit = e => {
         e.preventDefault();
-        /// use this in the future to setup email
-        // emailjs.sendForm('service_code', 'template_smthn', e.target, 'user_code').then(
-        //     result => {
-        //         alert('Email sent Successfully!');
-        //         document.querySelector('form').reset();
-        //     },
-        //     error => {
-        //         // console.log(error.text);
-        //         alert(error.text);
-        //     }
-        // );
+        const form = e.currentTarget;
+        const name = form.to_name.value.trim();
+        const email = form.from_name.value.trim();
+        const subject = form.affair.value.trim();
+        const message = form.message.value.trim();
+        const body = encodeURIComponent(`From: ${name} <${email}>\n\n${message}`);
+        const mailto = `mailto:23shlesh@gmail.com?subject=${encodeURIComponent(subject)}&body=${body}`;
+        window.location.href = mailto;
+        setStatus('Opening your email client...');
+        form.reset();
     };
 
     return (
@@ -41,10 +40,9 @@ const ContactScreen = () => {
                             rel="noreferrer"
                             href="https://www.linkedin.com/in/shailesh-t/"
                         >
-                            {' '}
                             linkedin
                         </a>{' '}
-                        or any of my social accounts. You can also do so by filling template_smthn form.
+                        or any of my social accounts. You can also do so by filling this form.
                     </p>
                 </Container>
             </ContactTitle>
@@ -53,8 +51,9 @@ const ContactScreen = () => {
                     <input placeholder={contact.fname} required type="text" name="to_name" />
                     <input placeholder={contact.femail} required type="email" name="from_name" />
                     <input placeholder={contact.fsubject} required type="text" name="affair" />
-                    <textarea placeholder={contact.ftext} required type="text" name="message" />
+                    <textarea placeholder={contact.ftext} required name="message" />
                     <button type="submit">{contact.fbutton}</button>
+                    {status ? <p className="form-status">{status}</p> : null}
                 </Container>
             </ContactForm>
         </>
