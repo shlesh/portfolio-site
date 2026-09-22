@@ -7,7 +7,7 @@
 :root {
     --lightBackground: #0b0724;
     --darkBackground: #2a1170;
-    --borders: #6d3dff;
+    --borders: #0b071c;
     --textColorDark: #f3eeff;
     --textColorLight: #f7f3ff;
     --textColorGray: #a89bc9;
@@ -20,7 +20,7 @@
 .color {
     --lightBackground: #14082c;
     --darkBackground: #5b2ad1;
-    --borders: #7a4dff;
+    --borders: #100826;
     --textColorDark: #fff;
     --textColorLight: #12071f;
     --textColorGray: #b7a8d9;
@@ -52,7 +52,20 @@ body {
 .bottom,
 .left,
 .right {
-    background: linear-gradient(180deg, #4a1fd0, #7a3dff 50%, #ff4fd8) !important;
+    background: rgba(7, 4, 20, 0.94) !important;
+    box-shadow: inset 0 0 0 1px rgba(92, 246, 255, 0.28);
+}
+.header::before {
+    box-shadow: inset 0 -1px 0 rgba(92, 246, 255, 0.45), 0 8px 24px rgba(5, 3, 20, 0.35);
+}
+.bottom {
+    box-shadow: inset 0 1px 0 rgba(255, 79, 216, 0.4), 0 -8px 24px rgba(5, 3, 20, 0.35);
+}
+.left {
+    box-shadow: inset -1px 0 0 rgba(92, 246, 255, 0.35);
+}
+.right {
+    box-shadow: inset 1px 0 0 rgba(255, 79, 216, 0.35);
 }
 .portf-container .name,
 .portf-container a {
