@@ -19,23 +19,14 @@ export const Section1 = styled.section`
     align-items: center;
     img {
         position: absolute;
-        width: 45rem;
-        height: 45rem;
-        top: calc(50% - 22.5rem);
-        left: calc(50% - 22.5rem);
-        opacity: 0.8;
-        filter: drop-shadow(0 0 2.4rem rgba(155, 107, 255, 0.45));
-    }
-    img:last-child {
         top: calc(100% - 10rem);
         left: calc(50% - 2.5rem);
-        opacity: 1;
-        bottom: 0;
         width: 5rem;
         height: 5rem;
         background: transparent;
-        filter: invert(1) drop-shadow(0 0 0.8rem #5cf6ff);
+        filter: drop-shadow(0 0 0.8rem #5cf6ff);
         animation: ${arrow} 1.5s ease-in-out infinite;
+        z-index: 3;
     }
     h1 {
         position: relative;
@@ -47,21 +38,7 @@ export const Section1 = styled.section`
         padding: 0 0.5rem;
         text-shadow: 0 0 1.6rem rgba(92, 246, 255, 0.45);
     }
-    &:before {
-        content: '';
-        position: absolute;
-        width: 50%;
-        right: 0;
-        height: 100%;
-    }
-
     @media only screen and (max-width: 768px) {
-        img {
-            width: 28rem;
-            height: 28rem;
-            top: calc(50% - 14rem);
-            left: calc(50% - 14rem);
-        }
         h1 {
             font-size: 3.5rem;
         }
@@ -91,7 +68,7 @@ export const TitleContainer = styled.div`
 `;
 
 export const Section2 = styled.section`
-    background: linear-gradient(120deg, rgba(20, 8, 48, 0.92), rgba(42, 17, 112, 0.88) 50%, rgba(12, 6, 36, 0.94));
+    background: linear-gradient(120deg, rgba(20, 8, 48, 0.72), rgba(42, 17, 112, 0.7) 50%, rgba(12, 6, 36, 0.78));
     min-height: 100vh;
     padding: 0 60px;
 `;
@@ -135,21 +112,10 @@ export const AboutMe = styled.div`
         &:first-child {
             padding-top: 6rem !important;
         }
-
-        h1 {
-            font-size: 3rem;
-        }
-        p {
-            padding-top: 3rem;
-            font-size: 1.6rem;
-        }
-        p:first-child {
-            padding-top: 3rem;
-        }
-        h4 {
-            font-size: 2rem;
-            margin: 3rem 0 1rem;
-        }
+        h1 { font-size: 3rem; }
+        p { padding-top: 3rem; font-size: 1.6rem; }
+        p:first-child { padding-top: 3rem; }
+        h4 { font-size: 2rem; margin: 3rem 0 1rem; }
     }
 `;
 export const Skills = styled.div`
@@ -168,7 +134,6 @@ export const Skills = styled.div`
         margin-right: 1rem;
         filter: drop-shadow(0 0 0.4rem rgba(92, 246, 255, 0.6));
     }
-
     @media only screen and (max-width: 768px) {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -176,7 +141,7 @@ export const Skills = styled.div`
 export const Section3 = styled.section`
     min-height: 40vh;
     width: 100%;
-    background: radial-gradient(circle at 50% 0%, rgba(255, 79, 216, 0.28), rgba(11, 7, 36, 0.95));
+    background: radial-gradient(circle at 50% 0%, rgba(255, 79, 216, 0.28), rgba(11, 7, 36, 0.8));
     display: flex;
     justify-content: center;
     align-items: center;
@@ -202,22 +167,17 @@ export const Container = styled.div`
         width: 100%;
         text-align: end;
     }
-
     @media only screen and (max-width: 768px) {
         width: 90%;
         padding: 5rem 0;
-        h3 {
-            font-size: 3rem;
-        }
-        p {
-            font-size: 1.6rem;
-        }
+        h3 { font-size: 3rem; }
+        p { font-size: 1.6rem; }
     }
 `;
 
 export const PortfolioLink = styled.div`
     min-height: 20vh;
-    background: linear-gradient(120deg, rgba(11, 7, 36, 0.96), rgba(42, 17, 112, 0.9));
+    background: linear-gradient(120deg, rgba(11, 7, 36, 0.8), rgba(42, 17, 112, 0.75));
     display: flex;
     justify-content: center;
     align-items: center;
@@ -237,7 +197,6 @@ export const PortfolioLink = styled.div`
         z-index: 1;
         box-shadow: 0 0 1.8rem rgba(92, 246, 255, 0.25);
     }
-
     a:before {
         content: '';
         width: 100%;
@@ -249,17 +208,14 @@ export const PortfolioLink = styled.div`
         transform-origin: right;
         transition: transform 300ms ease-out;
     }
-
     a:hover {
         border-color: #ff4fd8;
         color: #120824;
     }
-
     a:hover:before {
         transform: scaleX(1);
         transform-origin: left;
     }
-
     img {
         width: 4.5rem;
         height: 3rem;
@@ -273,14 +229,8 @@ export const PortfolioLink = styled.div`
     a:hover img {
         filter: invert(1);
     }
-
     @media only screen and (max-width: 768px) {
-        a {
-            font-size: 2rem;
-        }
-        img {
-            width: 3rem;
-            height: 2rem;
-        }
+        a { font-size: 2rem; }
+        img { width: 3rem; height: 2rem; }
     }
 `;
