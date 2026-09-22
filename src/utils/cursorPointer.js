@@ -1,1 +1,1 @@
-export const cursorEffect = () => () => {};
+export const cursorEffect = () => {};

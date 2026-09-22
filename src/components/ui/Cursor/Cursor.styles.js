@@ -2,32 +2,23 @@ import styled from 'styled-components';
 
 export const InnerCursor = styled.div`
     position: fixed;
+    z-index: 10;
     top: 0;
     left: 0;
-    z-index: 10000;
-    width: 14px;
-    height: 14px;
-    margin: 0;
-    border-radius: 50%;
-    background: #ffffff;
+    width: 1.5rem;
+    height: 1.5rem;
+    background: #fff;
     mix-blend-mode: difference;
+    border-radius: 50%;
     pointer-events: none;
     transform: translate(-50%, -50%);
     transform-origin: center center;
+    transition: width 0.3s ease, height 0.3s ease;
+
+    &.grow {
+        width: 6rem;
+        height: 6rem;
+    }
 `;
 
-export const OuterCursor = styled.div`
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 9999;
-    width: 36px;
-    height: 36px;
-    margin: 0;
-    border-radius: 50%;
-    border: 1px solid rgba(255, 255, 255, 0.9);
-    pointer-events: none;
-    transform: translate(-50%, -50%);
-    transform-origin: center center;
-    mix-blend-mode: difference;
-`;
+export const OuterCursor = styled.div``;

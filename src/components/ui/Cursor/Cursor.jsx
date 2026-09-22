@@ -1,84 +1,46 @@
 import React, { useEffect, useRef } from 'react';
-import { InnerCursor, OuterCursor } from './Cursor.styles';
+import { useLocation } from 'react-router-dom';
+import { InnerCursor } from './Cursor.styles';
 
 const INTERACTIVE =
-    'a, button, .icon, .logo, .portf-container, .scroll-section, .email, .menu-email, .icon-footer, .menu-button, input, textarea';
+    'a, button, .scroll-section, .icon, .logo, .portf-container, .nameSpan, .icon-footer, .email, .menu-email, .menu-button';
 
 const Cursor = () => {
-    const innerRef = useRef(null);
-    const outerRef = useRef(null);
+    const dotRef = useRef(null);
+    const { pathname } = useLocation();
 
     useEffect(() => {
-        const inner = innerRef.current;
-        const outer = outerRef.current;
-        if (!inner || !outer) return undefined;
+        const dot = dotRef.current;
+        if (!dot) return undefined;
 
-        const mouse = { x: -100, y: -100 };
-        const innerPos = { x: -100, y: -100 };
-        const outerPos = { x: -100, y: -100 };
-        let targetScale = 1;
-        let scale = 1;
-        let frame = 0;
-        let running = true;
-
-        const draw = () => {
-            if (!running) return;
-
-            innerPos.x += (mouse.x - innerPos.x) * 0.55;
-            innerPos.y += (mouse.y - innerPos.y) * 0.55;
-            outerPos.x += (mouse.x - outerPos.x) * 0.18;
-            outerPos.y += (mouse.y - outerPos.y) * 0.18;
-            scale += (targetScale - scale) * 0.22;
-
-            inner.style.left = `${innerPos.x}px`;
-            inner.style.top = `${innerPos.y}px`;
-            inner.style.transform = `translate(-50%, -50%) scale(${scale})`;
-
-            outer.style.left = `${outerPos.x}px`;
-            outer.style.top = `${outerPos.y}px`;
-            outer.style.transform = `translate(-50%, -50%) scale(${1 + (scale - 1) * 0.2})`;
-            outer.style.opacity = scale > 1.2 ? '0.35' : '0.8';
-
-            frame = requestAnimationFrame(draw);
-        };
-
-        const onMove = event => {
-            mouse.x = event.clientX;
-            mouse.y = event.clientY;
-            document.body.classList.add('cursor-on');
+        const move = event => {
+            dot.style.left = `${event.clientX}px`;
+            dot.style.top = `${event.clientY}px`;
         };
 
         const onOver = event => {
-            if (event.target.closest(INTERACTIVE)) targetScale = 3.4;
+            if (event.target.closest(INTERACTIVE)) dot.classList.add('grow');
         };
 
         const onOut = event => {
             const left = event.target.closest(INTERACTIVE);
             const still = event.relatedTarget && event.relatedTarget.closest(INTERACTIVE);
-            if (left && !still) targetScale = 1;
+            if (left && !still) dot.classList.remove('grow');
         };
 
-        document.addEventListener('mousemove', onMove, { passive: true });
+        document.addEventListener('mousemove', move, { passive: true });
         document.addEventListener('mouseover', onOver);
         document.addEventListener('mouseout', onOut);
-        frame = requestAnimationFrame(draw);
 
         return () => {
-            running = false;
-            cancelAnimationFrame(frame);
-            document.removeEventListener('mousemove', onMove);
+            document.removeEventListener('mousemove', move);
             document.removeEventListener('mouseover', onOver);
             document.removeEventListener('mouseout', onOut);
-            document.body.classList.remove('cursor-on');
+            dot.classList.remove('grow');
         };
-    }, []);
+    }, [pathname]);
 
-    return (
-        <>
-            <InnerCursor ref={innerRef} className="inner-cursor" />
-            <OuterCursor ref={outerRef} className="outer-cursor" />
-        </>
-    );
+    return <InnerCursor ref={dotRef} className="inner-cursor" />;
 };
 
 export default Cursor;

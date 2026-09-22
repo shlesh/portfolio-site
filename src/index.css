@@ -2,9 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-body.cursor-on,
-body.cursor-on * {
     cursor: none !important;
 }
 :root {
@@ -64,108 +61,4 @@ body::-webkit-scrollbar-thumb:active {
 ::selection {
     color: #fff;
     background: #0b4970;
-}
-
-@keyframes pageIn {
-    from { opacity: 0; transform: translateY(12px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-.main > *:not(.main-container):not(.menu):not(.menu-button) {
-    animation: pageIn 0.55s ease both;
-}
-.previews > *,
-.sect-3 .container,
-#sectTwo,
-.skills li {
-    animation: pageIn 0.7s ease both;
-}
-
-@keyframes starDrift {
-    from { background-position: 0 0, 40px 60px, 80px 20px; }
-    to { background-position: -400px 800px, 360px 900px, -200px 700px; }
-}
-@keyframes floatTriangle {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-1.4rem); }
-}
-@keyframes shimmerText {
-    0% { background-position: 0% 50%; }
-    100% { background-position: 200% 50%; }
-}
-@keyframes skillGlow {
-    0%, 100% { filter: drop-shadow(0 0 0 transparent); transform: translateY(0); }
-    50% { filter: drop-shadow(0 0 0.6rem rgba(111, 63, 168, 0.55)); transform: translateY(-0.15rem); }
-}
-
-body::before {
-    content: '';
-    position: fixed;
-    inset: 0;
-    pointer-events: none;
-    z-index: 0;
-    opacity: 0.55;
-    background-image:
-        radial-gradient(1.2px 1.2px at 12% 18%, rgba(255,255,255,0.9) 50%, transparent 51%),
-        radial-gradient(1px 1px at 72% 26%, rgba(204,235,255,0.85) 50%, transparent 51%),
-        radial-gradient(1.4px 1.4px at 88% 68%, rgba(191,128,255,0.9) 50%, transparent 51%),
-        radial-gradient(1px 1px at 34% 78%, rgba(255,255,255,0.7) 50%, transparent 51%),
-        radial-gradient(1px 1px at 54% 44%, rgba(255,204,255,0.8) 50%, transparent 51%);
-    background-size: 420px 420px, 360px 360px, 500px 500px, 280px 280px, 320px 320px;
-    animation: starDrift 90s linear infinite;
-}
-
-.sect-1 .picture img {
-    animation: floatTriangle 7.5s ease-in-out infinite;
-    filter: drop-shadow(0 0 2.4rem rgba(111, 63, 168, 0.28));
-}
-
-.scroll-section .container h2:first-child {
-    background: linear-gradient(90deg, #fff, #e3c7ff, #fff, #ccebff, #fff);
-    background-size: 220% 100%;
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    animation: shimmerText 7s linear infinite;
-}
-
-.skills li {
-    transition: transform 0.35s ease, filter 0.35s ease;
-}
-.skills li:hover {
-    animation: skillGlow 1.6s ease-in-out infinite;
-}
-
-.icon, .icon-footer {
-    transition: transform 0.35s ease, filter 0.35s ease;
-}
-.icon:hover, .icon-footer:hover {
-    transform: translateY(-0.2rem) scale(1.08);
-    filter: drop-shadow(0 0 0.8rem rgba(111, 63, 168, 0.55));
-}
-
-.menu-items li a {
-    transition: letter-spacing 0.35s ease, color 0.2s ease;
-}
-.menu-items li a:hover {
-    letter-spacing: 0.08em;
-}
-
-.scrollTop.active {
-    box-shadow: 0 0 1.8rem rgba(111, 63, 168, 0.45);
-}
-
-@media (prefers-reduced-motion: reduce) {
-    * {
-        animation: none !important;
-        transition: none !important;
-        scroll-behavior: auto !important;
-    }
-    html { cursor: auto; }
-    * { cursor: auto !important; }
-    body::before,
-    .sect-1 .picture img,
-    .scroll-section .container h2:first-child {
-        animation: none !important;
-        filter: none !important;
-    }
 }
