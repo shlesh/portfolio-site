@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { menuActionsFunc } from '../../../utils/actions';
+import { menuActionsFunc } from '../../../utils/actions.js';
 import twitterIcon from '../../../images/icons/twitter.svg';
 import linkedinIcon from '../../../images/icons/linkedin.svg';
 import githubIcon from '../../../images/icons/github.svg';
@@ -30,22 +30,22 @@ const Menu = () => {
                         <p>{footer}</p>
                         <ul>
                             <li>
-                                <NavLink activeClassName="link__active" exact to="/">
+                                <NavLink end className={({ isActive }) => (isActive ? 'link__active' : undefined)} to="/">
                                     HOME
                                 </NavLink>
                             </li>
                             <li>
-                                <NavLink activeClassName="link__active" to="/about">
+                                <NavLink className={({ isActive }) => (isActive ? 'link__active' : undefined)} to="/about">
                                     ABOUT
                                 </NavLink>
                             </li>
                             <li>
-                                <NavLink activeClassName="link__active" to="/portfolio">
+                                <NavLink className={({ isActive }) => (isActive ? 'link__active' : undefined)} to="/portfolio">
                                     PORTFOLIO
                                 </NavLink>
                             </li>
                             <li>
-                                <NavLink activeClassName="link__active" to="/contact">
+                                <NavLink className={({ isActive }) => (isActive ? 'link__active' : undefined)} to="/contact">
                                     CONTACT
                                 </NavLink>
                             </li>
@@ -81,37 +81,40 @@ const Menu = () => {
                     <p>MENU</p>
                 </MenuButton>
             </MainContainer>
-            {/* <!-- MENU
-      =============================== --> */}
             <MenuStyles className="menu">
                 <MenuBackGround className="menu-background"></MenuBackGround>
                 <MenuContainer className="menu-container">
                     <div className="contact">
                         <div className="menu-items">
                             <li>
-                                <NavLink activeClassName="link__active" exact to="/" className="menu-home">
+                                <NavLink
+                                    end
+                                    to="/"
+                                    className={({ isActive }) => `menu-home${isActive ? ' link__active' : ''}`}
+                                >
                                     Home
                                 </NavLink>
                             </li>
                             <li>
-                                <NavLink activeClassName="link__active" to="/about" className="menu-about">
+                                <NavLink
+                                    to="/about"
+                                    className={({ isActive }) => `menu-about${isActive ? ' link__active' : ''}`}
+                                >
                                     About Me
                                 </NavLink>
                             </li>
                             <li>
                                 <NavLink
-                                    activeClassName="link__active"
                                     to="/portfolio"
-                                    className="menu-portfolio"
+                                    className={({ isActive }) => `menu-portfolio${isActive ? ' link__active' : ''}`}
                                 >
                                     Portfolio
                                 </NavLink>
                             </li>
                             <li>
                                 <NavLink
-                                    activeClassName="link__active"
                                     to="/contact"
-                                    className="menu-contact"
+                                    className={({ isActive }) => `menu-contact${isActive ? ' link__active' : ''}`}
                                 >
                                     Contact
                                 </NavLink>

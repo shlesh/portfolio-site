@@ -18,7 +18,6 @@ import html from '../../../images/icons/html.svg';
 import js from '../../../images/icons/javascript.svg';
 import ra from '../../../images/icons/react.svg';
 import sass from '../../../images/icons/sass.svg';
-import triangle from '../../../images/triangle.png';
 import nt from '../../../images/icons/native.png';
 import nd from '../../../images/icons/node.png';
 import bootstrap from '../../../images/icons/bootstrap.png';
@@ -26,6 +25,7 @@ import figma from '../../../images/icons/figma.svg';
 import express from '../../../images/icons/express.png';
 import { useSelector } from 'react-redux';
 import ButtonAnim from '../../ui/Button/ButtonAnim';
+import CosmicMark from '../../ui/CosmicMark/CosmicMark';
 
 const About = () => {
     const { about } = useSelector(state => state.data.pageContent);
@@ -47,12 +47,13 @@ const About = () => {
         <>
             <Section1 id="top">
                 <h1>{about.abh1}</h1>
-                <img src={triangle} alt="triangle" />
+                <div className="hero-mark">
+                    <CosmicMark />
+                </div>
                 <img
                     onClick={move}
-                    src="https://icongr.am/entypo/chevron-small-down.svg?size=128&color=000000"
+                    src="https://icongr.am/entypo/chevron-small-down.svg?size=128&color=ffffff"
                     alt="arrow"
-                    color="white"
                 />
             </Section1>
 
@@ -74,30 +75,29 @@ const About = () => {
                             <Skills>
                                 <ul>
                                     <li>
-                                        <img src={html} alt="firebase" />
+                                        <img src={html} alt="html" />
                                         HTML
                                     </li>
                                     <li>
-                                        <img src={css} alt="firebase" />
+                                        <img src={css} alt="css" />
                                         CSS
                                     </li>
                                     <li>
-                                        <img src={js} alt="firebase" />
+                                        <img src={js} alt="javascript" />
                                         JavaScript
                                     </li>
-
                                     <li>
-                                        <img src={ra} alt="firebase" />
+                                        <img src={ra} alt="react" />
                                         React
                                     </li>
                                 </ul>
                                 <ul>
                                     <li>
-                                        <img src={nt} alt="firebase" />
+                                        <img src={nt} alt="react native" />
                                         React Native
                                     </li>
                                     <li>
-                                        <img src={nd} alt="firebase" />
+                                        <img src={nd} alt="node" />
                                         Node
                                     </li>
                                     <li>
@@ -111,7 +111,7 @@ const About = () => {
                                 </ul>
                                 <ul>
                                     <li>
-                                        <img src={sass} alt="firebase" />
+                                        <img src={sass} alt="sass" />
                                         Sass
                                     </li>
                                     <li>
@@ -119,7 +119,7 @@ const About = () => {
                                         Bootstrap
                                     </li>
                                     <li>
-                                        <img src={gith} alt="firebase" />
+                                        <img src={gith} alt="github" />
                                         Git/GitHub
                                     </li>
                                 </ul>

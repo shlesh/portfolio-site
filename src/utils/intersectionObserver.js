@@ -1,17 +1,12 @@
 const query = window.matchMedia('(max-width: 768px)');
 
 export const homeObserver = () => {
-    /* LANDING FOCUS
-=============================== */
     const main = document.querySelector('.main');
     const mainContainer = document.querySelector('.main-container');
     const sectionOne = document.querySelector('.sect-1');
+    if (!main || !mainContainer || !sectionOne) return;
 
-    const sectionOneOptions = {
-        threshold: 0.9,
-    };
-
-    const sectionOneObserver = new IntersectionObserver(function (entries, sectionOneObserver) {
+    const sectionOneObserver = new IntersectionObserver(function (entries) {
         entries.forEach(entry => {
             if (!entry.isIntersecting) {
                 main.classList.add('active');
@@ -21,19 +16,14 @@ export const homeObserver = () => {
                 mainContainer.classList.remove('active');
             }
         });
-    }, sectionOneOptions);
+    }, { threshold: 0.9 });
     sectionOneObserver.observe(sectionOne);
 
-    /* LIGHT BUTTON MENU
-      =============================== */
     const menuButton = document.querySelector('.menu-button');
     const scrollSection = document.querySelector('.scroll-section');
+    if (!menuButton || !scrollSection) return;
 
-    const menuOptions = {
-        threshold: 1,
-    };
-
-    const menuObserver = new IntersectionObserver(function (entries, menuObserver) {
+    const menuObserver = new IntersectionObserver(function (entries) {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 !query.matches && menuButton.classList.add('light-active');
@@ -41,22 +31,16 @@ export const homeObserver = () => {
                 !query.matches && menuButton.classList.remove('light-active');
             }
         });
-    }, menuOptions);
+    }, { threshold: 1 });
     menuObserver.observe(scrollSection);
 };
 
 export const footerObserver = () => {
-    /* FOOTER MENU - CONTACT FOCUS
-  =============================== */
-
     const footerMenu = document.querySelector('.menu-footer');
     const contactSection = document.querySelector('.sect-4');
+    if (!footerMenu || !contactSection) return;
 
-    const contactOptions = {
-        threshold: 0,
-    };
-
-    const contactObserver = new IntersectionObserver(function (entries, contactObserver) {
+    const contactObserver = new IntersectionObserver(function (entries) {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 footerMenu.classList.add('active');
@@ -66,7 +50,7 @@ export const footerObserver = () => {
                 footerMenu.classList.add('active-menu');
             }
         });
-    }, contactOptions);
+    }, { threshold: 0 });
     contactObserver.observe(contactSection);
 };
 
@@ -74,25 +58,18 @@ export const topObserver = () => {
     const main = document.querySelector('.main');
     const mainContainer = document.querySelector('.main-container');
     const sectionOne = document.querySelector('#top');
+    if (!main || !mainContainer || !sectionOne) return;
 
-    if (sectionOne) {
-        const sectionOneOptions = {
-            threshold: 0.9,
-        };
-
-        const sectionOneObserver = new IntersectionObserver(function (entries, sectionOneObserver) {
-            entries.forEach(entry => {
-                if (!entry.isIntersecting) {
-                    !query.matches && main.classList.add('active');
-                    mainContainer.classList.add('active');
-                } else {
-                    !query.matches && main.classList.remove('active');
-                    mainContainer.classList.remove('active');
-                }
-            });
-        }, sectionOneOptions);
-        sectionOneObserver.observe(sectionOne);
-    } else {
-        console.log('no document found');
-    }
+    const sectionOneObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) {
+                !query.matches && main.classList.add('active');
+                mainContainer.classList.add('active');
+            } else {
+                !query.matches && main.classList.remove('active');
+                mainContainer.classList.remove('active');
+            }
+        });
+    }, { threshold: 0.9 });
+    sectionOneObserver.observe(sectionOne);
 };

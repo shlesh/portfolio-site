@@ -3,30 +3,22 @@ import styled from 'styled-components';
 export const InnerCursor = styled.div`
     position: fixed;
     z-index: 10;
-    left: 1rem;
+    top: 0;
+    left: 0;
     width: 1.5rem;
     height: 1.5rem;
-    transform: translate(-50%, -50%);
     background: #fff;
     mix-blend-mode: difference;
     border-radius: 50%;
     pointer-events: none;
-    transition: width 0.3s, height 0.3s;
+    transform: translate(-50%, -50%);
+    transform-origin: center center;
+    transition: width 0.3s ease, height 0.3s ease;
+
     &.grow {
         width: 6rem;
         height: 6rem;
-        transition: width 0.3s, height 0.3s;
     }
 `;
-export const OuterCursor = styled.div`
-    /* position: fixed;
-    z-index: 5;
-    left: 1rem;
-    width: 3rem;
-    height: 3rem;
-    transform: translate(-50%, -50%);
-    border: 0.1rem solid #fff;
-    mix-blend-mode: difference;
-    border-radius: 50%;
-    pointer-events: none; */
-`;
+
+export const OuterCursor = styled.div``;

@@ -2,35 +2,123 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    cursor: none !important; /*Will hide the default cursor pointer*/
+    cursor: none !important;
 }
 :root {
-    /* --lightBackground: #6f3fa8; */
-    --lightBackground: #f8f8f8;
-    /*--darkBackground: #0e1319;*/
-    --darkBackground: #6f3fa8;
-    --borders: #fff;
-    /*--textColorDark: #0e1319;*/
-    --textColorDark: #161619;
-    --textColorLight: #f8f8f8;
-    --textColorGray: #808080;
-    --line: #2c3541;
+    --lightBackground: #0b0724;
+    --darkBackground: #2a1170;
+    --borders: #0b071c;
+    --textColorDark: #f3eeff;
+    --textColorLight: #f7f3ff;
+    --textColorGray: #a89bc9;
+    --line: #8b5cff;
+    --neonPink: #ff4fd8;
+    --neonCyan: #5cf6ff;
+    --neonViolet: #9b6bff;
+    --iconSurface: #efe7ff;
 }
 .color {
-    --lightBackground: #0e1319;
-    --darkBackground: #f8f8f8;
-    --borders: #000;
-    --textColorDark: #f8f8f8;
-    --textColorLight: #0e1319;
-    --textColorGray: #808080;
-    --line: #fff;
+    --lightBackground: #14082c;
+    --darkBackground: #5b2ad1;
+    --borders: #100826;
+    --textColorDark: #fff;
+    --textColorLight: #12071f;
+    --textColorGray: #b7a8d9;
+    --line: #5cf6ff;
 }
 html {
-    /* scroll-behavior: smooth; */
     font-size: 62.5%;
     font-family: 'Montserrat', sans-serif;
-    /* font-family: 'Inter', sans-serif; */
+    background: #050314;
 }
+body {
+    min-height: 100vh;
+    background:
+        radial-gradient(ellipse at 20% 10%, rgba(155, 107, 255, 0.28), transparent 42%),
+        radial-gradient(ellipse at 80% 80%, rgba(255, 79, 216, 0.16), transparent 40%),
+        radial-gradient(ellipse at 70% 20%, rgba(92, 246, 255, 0.12), transparent 36%),
+        #050314;
+    color: var(--textColorDark);
+}
+.cosmic-canvas {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+.header::before,
+.bottom,
+.left,
+.right {
+    background: rgba(10, 6, 28, 0.22) !important;
+    backdrop-filter: blur(16px) saturate(160%);
+    -webkit-backdrop-filter: blur(16px) saturate(160%);
+    box-shadow: none !important;
+}
+.header::before {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+.bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+.left {
+    border-right: 1px solid rgba(255, 255, 255, 0.06);
+}
+.right {
+    border-left: 1px solid rgba(255, 255, 255, 0.06);
+}
+.portf-container .name,
+.portf-container a {
+    color: #ffffff !important;
+}
+.hero-mark {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.menu-background {
+    background: rgba(5, 3, 20, 0.28) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+.menu-container {
+    background: rgba(12, 7, 32, 0.42) !important;
+    backdrop-filter: blur(22px) saturate(160%);
+    -webkit-backdrop-filter: blur(22px) saturate(160%);
+}
+.menu-items li a {
+    color: #f4efff !important;
+    -webkit-text-stroke-color: transparent !important;
+}
+.menu-items li a:before {
+    background: linear-gradient(90deg, #5cf6ff, #9b6bff, #ff4fd8) !important;
+    height: 1.2rem !important;
+}
+.menu-items li a:hover,
+.menu-items li a.link__active {
+    color: #ffffff !important;
+    -webkit-text-stroke-width: 0 !important;
+    text-shadow: 0 0 1.6rem rgba(92, 246, 255, 0.35);
+}
+.menu-footer a:before {
+    background: linear-gradient(90deg, #5cf6ff, #ff4fd8) !important;
+}
+.right .icon img,
+.menu-container .icon img {
+    filter: invert(1) brightness(1.35);
+}
+.logo a,
+.logo a span,
+.menu-button p {
+    color: #f4efff !important;
+}
+
 h3 {
     font-size: 28px;
     font-weight: 900;
@@ -45,28 +133,28 @@ h5,
 li {
     color: var(--textColorDark);
     text-decoration: none;
-    /* font-size: 1.6rem; */
 }
 li {
     list-style: none;
 }
 
-/* SCROLLBAR
-      =============================== */
 body::-webkit-scrollbar {
     width: 0.6rem;
 }
 body::-webkit-scrollbar-track {
-    background: var(--lightBackground);
+    background: #08051a;
 }
 body::-webkit-scrollbar-thumb {
-    background: var(--darkBackground);
-}
-body::-webkit-scrollbar-thumb:active {
-    background: #1c2531;
+    background: linear-gradient(#5cf6ff, #9b6bff, #ff4fd8);
 }
 
 ::selection {
-    color: #fff;
-    background: #0b4970;
+    color: #050314;
+    background: #5cf6ff;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .cosmic-canvas {
+        display: none;
+    }
 }

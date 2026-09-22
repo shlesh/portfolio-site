@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const ContactTitle = styled.section`
-    background: #fff;
+    background: rgba(11, 7, 36, 0.78);
     padding: 0 60px;
 `;
 export const Container = styled.div`
@@ -14,19 +14,21 @@ export const Container = styled.div`
     h1 {
         font-size: 6rem;
         margin-bottom: 1rem;
+        color: #fff;
+        text-shadow: 0 0 1.4rem rgba(155, 107, 255, 0.45);
     }
     p {
         font-size: 1.8rem;
         line-height: 3rem;
         margin-bottom: 3rem;
-        color: #666;
+        color: #b7a8d9;
     }
     a {
-        color: #666;
+        color: #5cf6ff;
         text-decoration: underline;
     }
     a:hover {
-        color: #000;
+        color: #ff4fd8;
     }
     @media only screen and (max-width: 768px) {
         min-height: 40vh;
@@ -43,7 +45,7 @@ export const Container = styled.div`
 `;
 export const ContactForm = styled.form`
     padding: 0 60px;
-    background: #fff;
+    background: rgba(8, 5, 26, 0.72);
     min-height: 70vh;
     div {
         display: flex;
@@ -58,23 +60,31 @@ export const ContactForm = styled.form`
         font-size: 1.8rem;
         padding: 1rem;
         outline: none;
-        border-bottom: 3px solid rgba(0, 0, 0, 0.1);
+        color: #f3eeff;
+        background: transparent;
+        border-bottom: 3px solid rgba(155, 107, 255, 0.35);
         transition: 0.3s;
     }
     input:hover,
-    textarea:hover {
-        border-bottom: 3px solid rgba(0, 0, 0, 1);
+    textarea:hover,
+    input:focus,
+    textarea:focus {
+        border-bottom: 3px solid #5cf6ff;
     }
     button {
         width: fit-content;
-        background: #161619;
+        background: #120824;
         color: #fff;
         outline: none;
         padding: 1rem 2rem;
         text-transform: uppercase;
         margin-top: 3rem;
-        /* font-size: 1.3rem; */
-        cursor: pointer;
+        border: 1px solid #5cf6ff;
+        box-shadow: 0 0 1.4rem rgba(92, 246, 255, 0.25);
+    }
+    button:hover {
+        border-color: #ff4fd8;
+        box-shadow: 0 0 1.6rem rgba(255, 79, 216, 0.35);
     }
     @media only screen and (max-width: 768px) {
         padding-bottom: 5rem;
