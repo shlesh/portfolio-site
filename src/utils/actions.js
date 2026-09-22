@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-expressions */
 export const menuActions = () => {
-    function menuActions() {
+    function toggleMenu() {
         document.querySelector('.menu')?.classList.toggle('active');
         document.querySelector('.menu-background')?.classList.toggle('active');
         document.querySelector('.menu-button')?.classList.toggle('active');
@@ -11,19 +11,25 @@ export const menuActions = () => {
         document.querySelector('.left')?.classList.toggle('active');
         document.querySelector('.menu-container')?.classList.toggle('active');
         document.querySelector('.menu-footer')?.classList.toggle('active-menu');
-        // Responsive
         document.querySelector('.logo')?.classList.toggle('active');
         document.querySelector('.name-container')?.classList.toggle('active');
         document.querySelector('.portf-container')?.classList.toggle('active');
     }
-    const clickMenu = function (e) {
-        document.querySelector(e).addEventListener('click', () => {
-            menuActions();
+
+    const clickMenu = function (selector) {
+        const el = document.querySelector(selector);
+        if (!el || el.dataset.menuBound === 'true') return;
+        el.dataset.menuBound = 'true';
+        el.addEventListener('click', () => {
+            toggleMenu();
         });
     };
+
     clickMenu('.menu-button');
     clickMenu('.menu-home');
     clickMenu('.menu-portfolio');
     clickMenu('.menu-about');
     clickMenu('.menu-contact');
 };
+
+export const menuActionsFunc = menuActions;

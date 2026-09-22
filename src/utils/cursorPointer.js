@@ -1,28 +1,28 @@
 /* eslint-disable no-unused-expressions */
 export const cursorEffect = () => {
-    /*  CURSOR POINTER
-      =============================== */
     let innerCursor = document.querySelector('.inner-cursor');
-    innerCursor?.classList.remove('grow');
+    if (!innerCursor) return;
+    innerCursor.classList.remove('grow');
+
+    const moveCursor = e => {
+        innerCursor.style.left = `${e.clientX}px`;
+        innerCursor.style.top = `${e.clientY}px`;
+    };
 
     document.addEventListener('mousemove', moveCursor);
 
-    function moveCursor(e) {
-        let x = e.clientX;
-        let y = e.clientY;
-
-        innerCursor.style.left = `${x}px`;
-        innerCursor.style.top = `${y}px`;
-    }
-
-    const elem = document?.querySelectorAll('.scroll-section');
-    const elem2 = document?.querySelectorAll('.icon');
-    const elem3 = document?.querySelectorAll('.logo');
-    const elem4 = document?.querySelectorAll('.portf-container');
-    const elem5 = document?.querySelectorAll('.nameSpan');
-    const elem6 = document?.querySelectorAll('.icon-footer');
-    const elem7 = document?.querySelectorAll('.email');
-    const elem8 = document?.querySelectorAll('.menu-email');
+    const groups = [
+        document.querySelectorAll('.scroll-section'),
+        document.querySelectorAll('.icon'),
+        document.querySelectorAll('.logo'),
+        document.querySelectorAll('.portf-container'),
+        document.querySelectorAll('.nameSpan'),
+        document.querySelectorAll('.icon-footer'),
+        document.querySelectorAll('.email'),
+        document.querySelectorAll('.menu-email'),
+        document.querySelectorAll('a'),
+        document.querySelectorAll('button'),
+    ];
 
     const mouseHover = function (el) {
         el.forEach(item => {
@@ -35,12 +35,5 @@ export const cursorEffect = () => {
         });
     };
 
-    mouseHover(elem);
-    mouseHover(elem2);
-    mouseHover(elem3);
-    mouseHover(elem4);
-    mouseHover(elem5);
-    mouseHover(elem6);
-    mouseHover(elem7);
-    mouseHover(elem8);
+    groups.forEach(mouseHover);
 };

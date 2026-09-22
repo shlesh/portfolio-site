@@ -5,12 +5,9 @@
     cursor: none !important; /*Will hide the default cursor pointer*/
 }
 :root {
-    /* --lightBackground: #6f3fa8; */
     --lightBackground: #f8f8f8;
-    /*--darkBackground: #0e1319;*/
     --darkBackground: #6f3fa8;
     --borders: #fff;
-    /*--textColorDark: #0e1319;*/
     --textColorDark: #161619;
     --textColorLight: #f8f8f8;
     --textColorGray: #808080;
@@ -26,10 +23,8 @@
     --line: #fff;
 }
 html {
-    /* scroll-behavior: smooth; */
     font-size: 62.5%;
     font-family: 'Montserrat', sans-serif;
-    /* font-family: 'Inter', sans-serif; */
 }
 h3 {
     font-size: 28px;
@@ -45,14 +40,11 @@ h5,
 li {
     color: var(--textColorDark);
     text-decoration: none;
-    /* font-size: 1.6rem; */
 }
 li {
     list-style: none;
 }
 
-/* SCROLLBAR
-      =============================== */
 body::-webkit-scrollbar {
     width: 0.6rem;
 }
@@ -69,4 +61,27 @@ body::-webkit-scrollbar-thumb:active {
 ::selection {
     color: #fff;
     background: #0b4970;
+}
+
+@keyframes pageIn {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.main > *:not(.main-container):not(.menu):not(.menu-button) {
+    animation: pageIn 0.55s ease both;
+}
+.previews > *,
+.sect-3 .container,
+#sectTwo,
+.skills li {
+    animation: pageIn 0.7s ease both;
+}
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+        scroll-behavior: auto !important;
+    }
+    html { cursor: auto; }
+    * { cursor: auto !important; }
 }
