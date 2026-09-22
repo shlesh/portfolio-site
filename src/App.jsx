@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Route, Routes, useLocation } from 'react-router-dom';
+import { Navigate, Route, Routes, useLocation } from 'react-router-dom';
 import ContactFooter from './components/ui/Footer/ContactFooter';
 import GlobalActions from './components/GlobalActions';
 import About from './components/pages/AboutScreen/AboutScreen';
@@ -21,6 +21,8 @@ const App = () => {
         <Main className="main" key={location.pathname}>
             <GlobalActions />
             <Routes>
+                <Route path="/portfolio-site" element={<Navigate to="/" replace />} />
+                <Route path="/portfolio-site/*" element={<Navigate to="/" replace />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/portfolio" element={<PortfolioScreen />} />
                 <Route path="/contact" element={<ContactScreen />} />

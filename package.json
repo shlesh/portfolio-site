@@ -4,7 +4,7 @@
   "private": true,
   "license": "MIT",
   "type": "module",
-  "homepage": "https://shlesh.github.io/portfolio-site/",
+  "homepage": "/",
   "engines": {
     "node": ">=18"
   },
